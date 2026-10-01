@@ -55,9 +55,10 @@ jobs:
           # summa bo'lsin"): boblar paketi - 100 bob 30 ming, 200 ta 50 ming, 300 ta 80 ming so'm.
           # To'lovdan keyin admin paketni beradi, har tarjima qilingan bob balansdan yechiladi.
           PACKS: "100:30000,200:50000,300:80000"
-          # Bitta odam kuniga eng ko'pi 200 bob (adminlar cheklanmaydi; Toshkent 00:00 da yangilanadi)
-          DAILY_LIMIT: "200"
-          # Buyurtma dizayni (shop.py): 6 tugmali menyu, bosqichli buyurtma, Buyurtmalarim, /admin panel
+          # Kunlik chegara YO'Q (2026-10-01, foydalanuvchi: "bizda limit ... yo'q") - hisob
+          # paket balansi bilan yuritiladi. Kerak bo'lsa: DAILY_LIMIT: "200" (Toshkent 00:00).
+          DAILY_LIMIT: "0"
+          # Yangi UX (shop.py, 2026-10-01): 4 tugmali menyu, bitta yuklash seansi, tarix + saqlangan natija
           SHOP_UI: "1"
           # Navbatsiz: bir vaqtda 3 ta ish, bo'sh foydalanuvchi oldinga (bot.py _pick_job)
           PARALLEL_JOBS: "3"

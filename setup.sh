@@ -24,6 +24,7 @@ export GH_TOKEN
 # 1) Repo (ochiq - Actions bepul va cheksiz) va kod
 gh repo create "$REPO" --public \
    --description "@Manhwatarjima1_bot - manhwa tarjima boti (GitHub Actions)" || true
+git branch -M main
 git push "https://x-access-token:$GH_TOKEN@github.com/$REPO.git" main
 git branch --set-upstream-to=origin/main main 2>/dev/null || true
 
